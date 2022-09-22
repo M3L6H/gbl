@@ -1,7 +1,9 @@
 #ifndef gblc_lexer_h
 #define gblc_lexer_h
 
+#include <fstream>
 #include <string>
+#include <vector>
 
 //! Namespace for the gbl compiler
 namespace gblc {
@@ -66,12 +68,14 @@ namespace gblc {
     /*!
      * @brief Construct a new Token object.
      *
+     * @details col and line are both expected to be 0-based indices.
+     *
      * @param col  The column the first character of the token is at
      * @param line The line the token is on
      * @param text The text comprising the token
      * @param type The type of the token
      */
-    Token(int col, int line, std::string text, TokenType type);
+    Token(int col, int line, const std::string& text, TokenType type);
 
     /*!
      * @brief Construct a new Token object with a float value.
@@ -82,7 +86,7 @@ namespace gblc {
      * @param type  The type of the token
      * @param value The float value of the token
      */
-    Token(int col, int line, std::string text, TokenType type, float value);
+    Token(int col, int line, const std::string& text, TokenType type, float value);
 
     /*!
      * @brief Construct a new Token object with an int value.
@@ -93,7 +97,7 @@ namespace gblc {
      * @param type  The type of the token
      * @param value The int value of the token
      */
-    Token(int col, int line, std::string text, TokenType type, int value);
+    Token(int col, int line, const std::string& text, TokenType type, int value);
 
   private:
     float _float_value;
@@ -107,7 +111,10 @@ namespace gblc {
     int _col  = 0;
     int _line = 0;
 
-    std::string _text;
+    bool _parsing_token = false;
+
+    std::ifstream*            _file;
+    std::vector<std::string>  _text;
 
   public:
     /*!
@@ -119,6 +126,9 @@ namespace gblc {
      * @param input Path to a file or some raw text to tokenize
      */
     Lexer(const std::string input);
+
+    //! Lexer destructor
+    virtual ~Lexer();
 
     /*!
      * @brief Get the next token in the input and advance the Lexer.
@@ -137,6 +147,9 @@ namespace gblc {
 
     //! Advance the Lexer by one character
     void next();
+
+    //! Setter for _parsing_token
+    void set_parsing_token(bool value);
   };
 }
 
