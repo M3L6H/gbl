@@ -1,12 +1,12 @@
 CXX		   = g++
-DEBUG		 = -g
+DEBUG		 = -g -Wall
 ODIR	   = obj
 OPTIMIZE = -O2
 RM		   = rm -f
 SDIR	   = src
 TARGET   = gblc
 
-SRCS  = gblc.cpp
+SRCS  = gblc.cpp lexer.cpp
 _OBJS = $(subst .cpp,.o,$(SRCS))
 OBJS  = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
@@ -23,3 +23,6 @@ $(ODIR)/%.o: $(SDIR)/%.cpp
 
 clean:
 	$(RM) $(OBJS) $(TARGET)
+
+docs: Doxyfile src/*
+	doxygen Doxyfile
