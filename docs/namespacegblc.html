@@ -121,14 +121,18 @@ Classes</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:adfcc6d7f4febeba4ed27bdaae88b1e5c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5c">TokenType</a> { <br />
 &#160;&#160;<a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca9fb617ede1a9709e2c8990d003781484">close_paren</a>
+, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cacb5e100e5a9a3e7f6d1fd97512215282">error</a>
 , <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca2e51b1ab42e8a4a67f3445174be5191b">eof</a>
 , <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cadabe6e597b70e5760826aea1dcc564f7">minus</a>
-, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cab1bc248a7ff2b2e95569f56de68615df">number</a>
 , <br />
-&#160;&#160;<a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cab404de7cd26ba2449c0eb514a602d755">open_paren</a>
+&#160;&#160;<a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca5dcb4a1ea5a35da52691d50c8313c333">modulo</a>
+, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cab1bc248a7ff2b2e95569f56de68615df">number</a>
+, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cab404de7cd26ba2449c0eb514a602d755">open_paren</a>
 , <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cad7d18cfb3a0d8293e2f5d94ea30e04d2">plus</a>
-, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca9fbbaa4cc515bc46e0c12e82a31df736">slash</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca9fbbaa4cc515bc46e0c12e82a31df736">slash</a>
 , <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca8ff953dd97c4405234a04291dee39e0b">star</a>
+, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca67b8601a11e47a9ee3bf08ddfd0b79ba">whitespace</a>
 <br />
  }</td></tr>
 <tr class="memdesc:adfcc6d7f4febeba4ed27bdaae88b1e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokens that are recognized by the Lexer.  <a href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5c">More...</a><br /></td></tr>
@@ -173,9 +177,13 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5ca9fb617ede1a9709e2c8990d003781484" name="adfcc6d7f4febeba4ed27bdaae88b1e5ca9fb617ede1a9709e2c8990d003781484"></a>close_paren&#160;</td><td class="fielddoc"><p >Close parentheses. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5cacb5e100e5a9a3e7f6d1fd97512215282" name="adfcc6d7f4febeba4ed27bdaae88b1e5cacb5e100e5a9a3e7f6d1fd97512215282"></a>error&#160;</td><td class="fielddoc"><p >Unrecognized token. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5ca2e51b1ab42e8a4a67f3445174be5191b" name="adfcc6d7f4febeba4ed27bdaae88b1e5ca2e51b1ab42e8a4a67f3445174be5191b"></a>eof&#160;</td><td class="fielddoc"><p >End of file marker. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5cadabe6e597b70e5760826aea1dcc564f7" name="adfcc6d7f4febeba4ed27bdaae88b1e5cadabe6e597b70e5760826aea1dcc564f7"></a>minus&#160;</td><td class="fielddoc"><p >Hyphen character interpreted as minus symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5ca5dcb4a1ea5a35da52691d50c8313c333" name="adfcc6d7f4febeba4ed27bdaae88b1e5ca5dcb4a1ea5a35da52691d50c8313c333"></a>modulo&#160;</td><td class="fielddoc"><p >Percent character interpreted as modulo symbol. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5cab1bc248a7ff2b2e95569f56de68615df" name="adfcc6d7f4febeba4ed27bdaae88b1e5cab1bc248a7ff2b2e95569f56de68615df"></a>number&#160;</td><td class="fielddoc"><p >Any numeric value. </p>
 </td></tr>
@@ -186,6 +194,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5ca9fbbaa4cc515bc46e0c12e82a31df736" name="adfcc6d7f4febeba4ed27bdaae88b1e5ca9fbbaa4cc515bc46e0c12e82a31df736"></a>slash&#160;</td><td class="fielddoc"><p >Slash symbol. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5ca8ff953dd97c4405234a04291dee39e0b" name="adfcc6d7f4febeba4ed27bdaae88b1e5ca8ff953dd97c4405234a04291dee39e0b"></a>star&#160;</td><td class="fielddoc"><p >Asterisk symbol. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcc6d7f4febeba4ed27bdaae88b1e5ca67b8601a11e47a9ee3bf08ddfd0b79ba" name="adfcc6d7f4febeba4ed27bdaae88b1e5ca67b8601a11e47a9ee3bf08ddfd0b79ba"></a>whitespace&#160;</td><td class="fielddoc"><p >Whitespace. </p>
 </td></tr>
 </table>
 
@@ -209,6 +219,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if a character is a whitespace character. </p>
+<p >Delegates to <a href="https://en.cppreference.com/w/cpp/string/byte/isspace">std::isspace</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>The character to check </td></tr>

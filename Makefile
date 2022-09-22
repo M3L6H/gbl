@@ -6,7 +6,7 @@ RM		   = rm -f
 SDIR	   = src
 TARGET   = gblc
 
-SRCS  = gblc.cpp lexer.cpp
+SRCS  = gblc.cpp lexer.cpp utils.cpp
 _OBJS = $(subst .cpp,.o,$(SRCS))
 OBJS  = $(patsubst %,$(ODIR)/%,$(_OBJS))
 

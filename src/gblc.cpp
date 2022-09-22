@@ -2,7 +2,7 @@
 #include <sstream>
 
 #include "lexer.hpp"
-#include "utils.cpp"
+#include "utils.hpp"
 
 using namespace gblc;
 
@@ -13,10 +13,13 @@ int main() {
     std::getline(std::cin, input);
 
     Lexer lexer(input);
+    while (true) {
+      auto token = lexer.next_token();
+      if (token.type == TokenType::eof) break;
+      std::cout << "Token: " << (int)token.type << " " << token.text << std::endl;
+    }
 
     if (is_whitespace_or_empty(input)) break;
-
-    std::cout << input << std::endl;
   }
 
   return 0;

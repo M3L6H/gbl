@@ -109,11 +109,20 @@ $(document).ready(function(){initNavTree('lexer_8hpp.html',''); initResizable();
 Include dependency graph for lexer.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="lexer_8hpp__incl.png" border="0" usemap="#asrc_2lexer_8hpp" alt=""/></div>
+<map name="asrc_2lexer_8hpp" id="asrc_2lexer_8hpp">
+<area shape="rect" title=" " alt="" coords="5,5,103,31"/>
+<area shape="rect" title=" " alt="" coords="27,79,81,104"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="lexer_8hpp__dep__incl.png" border="0" usemap="#asrc_2lexer_8hppdep" alt=""/></div>
+<map name="asrc_2lexer_8hppdep" id="asrc_2lexer_8hppdep">
+<area shape="rect" title=" " alt="" coords="63,5,161,31"/>
+<area shape="rect" href="gblc_8cpp.html" title=" " alt="" coords="5,79,99,104"/>
+<area shape="rect" href="lexer_8cpp.html" title=" " alt="" coords="123,79,221,104"/>
+</map>
 </div>
 </div>
 <p><a href="lexer_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -122,6 +131,9 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgblc_1_1_token.html">gblc::Token</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structgblc_1_1_token.html" title="Token that is returned by the Lexer.">Token</a> that is returned by the <a class="el" href="classgblc_1_1_lexer.html" title="Class for tokenizing a file or string.">Lexer</a>.  <a href="structgblc_1_1_token.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgblc_1_1_token_1_1_value_exception.html">gblc::Token::ValueException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception thrown when the value getter is called on a value-less token.  <a href="classgblc_1_1_token_1_1_value_exception.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgblc_1_1_lexer.html">gblc::Lexer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for tokenizing a file or string.  <a href="classgblc_1_1_lexer.html#details">More...</a><br /></td></tr>
@@ -137,14 +149,18 @@ Namespaces</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:adfcc6d7f4febeba4ed27bdaae88b1e5c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5c">gblc::TokenType</a> { <br />
 &#160;&#160;<a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca9fb617ede1a9709e2c8990d003781484">gblc::close_paren</a>
+, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cacb5e100e5a9a3e7f6d1fd97512215282">gblc::error</a>
 , <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca2e51b1ab42e8a4a67f3445174be5191b">gblc::eof</a>
 , <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cadabe6e597b70e5760826aea1dcc564f7">gblc::minus</a>
-, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cab1bc248a7ff2b2e95569f56de68615df">gblc::number</a>
 , <br />
-&#160;&#160;<a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cab404de7cd26ba2449c0eb514a602d755">gblc::open_paren</a>
+&#160;&#160;<a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca5dcb4a1ea5a35da52691d50c8313c333">gblc::modulo</a>
+, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cab1bc248a7ff2b2e95569f56de68615df">gblc::number</a>
+, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cab404de7cd26ba2449c0eb514a602d755">gblc::open_paren</a>
 , <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5cad7d18cfb3a0d8293e2f5d94ea30e04d2">gblc::plus</a>
-, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca9fbbaa4cc515bc46e0c12e82a31df736">gblc::slash</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca9fbbaa4cc515bc46e0c12e82a31df736">gblc::slash</a>
 , <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca8ff953dd97c4405234a04291dee39e0b">gblc::star</a>
+, <a class="el" href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5ca67b8601a11e47a9ee3bf08ddfd0b79ba">gblc::whitespace</a>
 <br />
  }</td></tr>
 <tr class="memdesc:adfcc6d7f4febeba4ed27bdaae88b1e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokens that are recognized by the Lexer.  <a href="namespacegblc.html#adfcc6d7f4febeba4ed27bdaae88b1e5c">More...</a><br /></td></tr>
