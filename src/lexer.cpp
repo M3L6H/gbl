@@ -73,11 +73,12 @@ Lexer::Lexer(const std::string input) : _text({ input }) {
   if (file->is_open()) {
     _file = file;
     std::getline(*_file, _text[0]);
-    _text[0].append("\n");
   } else {
     _file = nullptr;
     delete file;
   }
+
+  _text[0].append("\n");
 }
 
 Lexer::~Lexer() {
@@ -150,7 +151,7 @@ const char Lexer::current() const {
 void Lexer::next() {
   ++_col;
 
-  if (_col >= (int)_text[_text.size() - 1].size() && _file->good()) {
+  if (_col >= (int)_text[_text.size() - 1].size() && _file && _file->good()) {
     if (_parsing_token) {
       _text.push_back("");
       std::getline(*_file, _text[_text.size() - 1]);
@@ -167,7 +168,7 @@ void Lexer::next() {
 void Lexer::set_parsing_token(bool value) {
   _parsing_token = value;
 
-  if (!value && (int)_text.size() > 0) {
+  if (!value && (int)_text.size() > 1) {
     std::string temp = _text[_text.size() - 1];
     _text.clear();
     _text.push_back(temp);
