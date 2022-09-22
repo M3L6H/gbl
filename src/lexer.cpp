@@ -76,7 +76,7 @@ Token Lexer::next_token() {
   int line = _line;
 
   if (current() == '\0') {
-    return { col, line, "", TokenType::eof };
+    return { col, line, "\0", TokenType::eof };
   }
 
   // Handle numbers
